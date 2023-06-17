@@ -38,7 +38,7 @@ void busca(Lista *lista, int info){
         aux = aux->prox;
     }
     return NULL;
-} 1 2 3 4
+} 
 void remove(Lista*lista, int trash){
     No *aux = lista->inicio; // cria ponteiro auxiliar para percorrer a lista
     No *ant = NULL; //ponteiro auxiliar para obter o elemento anterior 
@@ -52,6 +52,22 @@ void remove(Lista*lista, int trash){
     else ant->prox = aux->prox; // liga o elemento anterior ao proximo do atual para desencadea-lo
     free(aux); // desencadea o elemento atual
     lista->n--; // subtrai em 1 o tamanho da lista
+} 
+void insereOrdenado(Lista *lista, int newInfo){
+    No *novo = (No*)malloc(sizeof(No));
+    No *aux = lista->inicio;
+    No *ant = NULL;
+
+    while (aux->prox != NULL && aux->info < newInfo){
+        ant = aux;
+        aux = aux->prox;
+    }
+    if(ant==NULL){
+        novo->prox = lista->inicio;
+        lista->inicio = novo;
+    }else{
+        novo->prox = ant->prox;
+        ant->prox = novo;
+    }
 }
-void insereOrdenado(){}
 int main(){}
