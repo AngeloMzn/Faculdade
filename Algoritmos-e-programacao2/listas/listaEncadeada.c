@@ -19,14 +19,14 @@ Lista iniciarLista(){
 void inserirInicio(Lista* lista, int newInfo){
     No* novo = (No*)malloc(sizeof(No));
     novo->info = newInfo;
-    novo->prox = *lista;
+    novo->prox = lista->inicio;
     lista->inicio = novo;
     lista->n++;
 }
 void imprimeLista(Lista *lista){
     No *aux = lista->inicio;
     while(aux != NULL){
-        printf("%d", p->info);
+        printf("%d", aux->info);
         aux = aux->prox;
     }
     printf("\n");
@@ -38,7 +38,7 @@ void busca(Lista *lista, int info){
         aux = aux->prox;
     }
     return NULL;
-}
+} 1 2 3 4
 void remove(Lista*lista, int trash){
     No *aux = lista->inicio; // cria ponteiro auxiliar para percorrer a lista
     No *ant = NULL; //ponteiro auxiliar para obter o elemento anterior 
@@ -53,4 +53,5 @@ void remove(Lista*lista, int trash){
     free(aux); // desencadea o elemento atual
     lista->n--; // subtrai em 1 o tamanho da lista
 }
+void insereOrdenado(){}
 int main(){}
