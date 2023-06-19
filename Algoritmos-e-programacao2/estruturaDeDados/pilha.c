@@ -10,7 +10,7 @@ struct pilha{
     int n;
 };
 typedef struct pilha Pilha;
-Pilha iniciaPilha(){
+Pilha* iniciaPilha(){
     Pilha *pilha = (Pilha*)malloc(sizeof(Pilha));
     pilha->inicio = NULL;
     pilha->n = 0;
