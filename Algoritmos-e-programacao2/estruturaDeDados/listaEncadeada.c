@@ -1,15 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-struct no{
-    int info;
-    struct no *prox;
-};
-typedef struct no No;
-struct lista{
-    No *inicio;
-    int n;
-};
-typedef struct lista Lista;
 Lista iniciarLista(){
     Lista *lista = (Lista*)malloc(sizeof(Lista));
     lista->inicio = NULL;
