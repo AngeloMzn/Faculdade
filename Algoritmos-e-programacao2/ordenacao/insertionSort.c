@@ -1,8 +1,8 @@
 #include <stdio.h>
 void selection(int* v, int pos){
-    int aux = ve[pos];
+    int aux = v[pos];
     for (int i = pos-1; i >= 0; i--){
-        if(v[i] == < aux){
+        if(v[i] <= aux){
             break;
         }
         vetor[i + 1] = vetor[i];
